@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Page 1</title>
+
+<script>
+	function validate()
+	{
+	var uname = document.getElementById("name").value; 	
+	var emailstring = document.getElementById("email").value;
+	var mobileno = document.getElementById("mobile").value;
+	var alphabets = /^[A-Za-z]+$/;
+	var emailformat = /^([a-zA-Z0-9\.-]{1,})@([a-zA-Z0-9-]{1,}).([a-z]{2,})(.[a-z]{2,})?$/;
+	var mobileformat = /^\d{10}$/;
+		
+	if (uname.trim() == "")
+	{alert("Please enter a valid name");
+	return false;
+	}
+	else
+	{true;
+	}
+
+	if (uname.match(alphabets))
+	{true;
+	}
+	else
+	{alert("Only alphabets are allowed in Name");
+	}	
+
+	if (emailstring == "")
+	{alert("Please enter your email");
+	return false;
+	}
+	else
+	{true;
+	}
+
+	if (emailstring.match(emailformat))
+	{true;
+	}
+	else
+	{alert("Please enter a valid email");
+	return false;
+	}
+	
+	if (mobileno != "" && mobileno.match(mobileformat))
+	{true;	
+	}
+	else
+	{alert("Please enter a 10-digit mobile number");
+	return false;
+	}
+
+	if(birthday == "yyyy-mm-dd")
+	{alert("Please enter your birthday");
+	return false;
+	}
+	else
+	{true;
+	}	
+
+	if (document.getElementById("female").checked)
+	{true;
+	}
+	else if (document.getElementById("male").checked)
+	{true;
+	}
+	else if (document.getElementById("other").checked)
+	{true;
+	}
+	else
+	{alert("Please select your gender");
+	return false;	
+	}
+
+	}
+	
+</script>
+
+</head>
+
+<body>
+
+<form id="form" method="post" onsubmit="return validate()">
+
+<fieldset> 
+
+<legend><b>Personal Details</b></legend>
+
+	<label for="name">Name</label><br>
+	<input type="text" id="name" name="name"><br><br>
+	
+	<label for="email">Email</label><br>
+	<input type="text" id="email" name="email"><br><br>
+
+	<label for="mobile">Mobile</label><br>
+	<input type="text" id="mobile" name="mobile"><br><br>	
+
+	<label for="birthday">Date of Birth</label><br>
+	<input type="date" id="birthday" name="birthday" required><br><br>	
+
+	<label for="gender">Gender</label><br>
+	<input type="radio" id="female" name="gender" value="female">
+	<label for="female">Female</label><br>	
+	<input type="radio" id="male" name="gender" value="male">
+	<label for="male">Male</label><br>
+	<input type="radio" id="other" name="gender" value="other">
+	<label for="Other">Other</label><br><br>
+
+	<input type="submit" value="Submit" formaction="Page_2.html">
+
+</fieldset> 
+
+</form>
+
+</body>
+
+</html>

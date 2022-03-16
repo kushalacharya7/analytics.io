@@ -51,14 +51,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 	
-$(window).load(function(){
-	var timestart = Date.now();	
+jQuery(window).load(function(){
+	var timestart = (Date.now()/1000);	
 	
 $(".food").click(function(){
-    	var timeend = Date.now();
+    	var timeend = (Date.now()/1000);
 	var timetaken = timeend - timestart;
-	var imagename = document.getElementById("burger").value; 
-	dataLayer.push({'time taken' : 'timetaken', 'image name' : "imagename"});  
+	var imagetemp = $(.food).attr("id");
+	var imagename = document.getElementById("imagetemp").value;
+	dataLayer.push({'time taken' : timetaken, 'imagename' : imagename});  
   });
 });
 

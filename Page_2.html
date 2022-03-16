@@ -57,8 +57,7 @@ jQuery(window).load(function(){
 $(".food").click(function(){
     	var timeend = (Date.now()/1000);
 	var timetaken = timeend - timestart;
-	var imagetemp = $(".food").attr("id");
-	var imagename = document.getElementById("imagetemp").value;
+	var imagename = this.id();
 	dataLayer.push({'time taken' : timetaken, 'imagename' : imagename});  
   });
 });

@@ -93,6 +93,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	
 </script>
 
+<script>
+$(document).ready(function(){
+  $(#name).focus(function(){
+    dataLayer.push({'event' : 'form fill'});
+  });
+});
+</script>	
+	
 </head>
 
 <body>

@@ -128,8 +128,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<label for="Other">Other</label><br><br>
 
 <script>
+
 $(document).ready(function(){
-  $(#name).focus(function(){
+  $("#name").focus(function(){
     dataLayer.push({'event' : 'form fill'});
   });
 });

@@ -51,13 +51,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 	
-jQuery(window).load(function(){
+$(document).ready(function(){
 	var timestart = (Date.now()/1000);	
 	
-$(".food").click(function(){
+$(".food").on('change', function() {
     	var timeend = (Date.now()/1000);
 	var timetaken = timeend - timestart;
-	var imagename = this.id();
+	var imagename = $('input[name=food]:checked').val();
 	dataLayer.push({'time taken' : timetaken, 'imagename' : imagename});  
   });
 });

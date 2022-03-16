@@ -22,22 +22,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	
 <title>Page 2</title>
-
-<script>
-	
-$(window).load(function(){
-	var timestart = new Date();	
-});
-	
-$(document).ready(function(){
-  $("#burger").click(function(){
-    	var timeend = Date.now();
-	var timetaken = timeend - timestart;
-	var imagename = document.getElementById("burger").value; 
-	window.dataLayer.push({'time taken' : 'timetaken', 'image name' : "imagename"});  
-  });
-});
-</script>
 	
 </head>
 
@@ -65,6 +49,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<input type="radio" name="food" id="thali" value="Thali.jpg">
 	<label for="thali"><img src="Thali.jpg" width="300" height="200"></label><br><br>
 
+<script>
+	
+$(window).load(function(){
+	var timestart = Date.now();	
+	
+$("#burger").click(function(){
+    	var timeend = Date.now();
+	var timetaken = timeend - timestart;
+	var imagename = document.getElementById("burger").value; 
+	window.dataLayer.push({'time taken' : 'timetaken', 'image name' : "imagename"});  
+  });
+});
+
+</script>
+	
 	<button type"submit" value="next" formaction="Page_3.html">Next</button>
 </form>
 

@@ -49,12 +49,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<input type="radio" name="food" id="thali" class="food" value="Thali.jpg">
 	<label for="thali"><img src="Thali.jpg" width="300" height="200"></label><br><br>
 
+	<button type"submit" value="next" formaction="Page_3.html">Next</button>
+	
 <script>
 	
 $(document).ready(function(){
 	var timestart = (Date.now()/1000);	
 	
-$(".food").on('submit', function() {
+$(".food").on("submit", function() {
     	var timeend = (Date.now()/1000);
 	var timetaken = timeend - timestart;
 	var imagename = $('input[name=food]:checked').val();
@@ -64,7 +66,6 @@ $(".food").on('submit', function() {
 
 </script>
 	
-	<button type"submit" value="next" formaction="Page_3.html">Next</button>
 </form>
 
 </body>

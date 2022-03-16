@@ -11,6 +11,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <title>Page 2</title>
 
+<script>
+	
+$(window).load(function() {
+	var timestart = new Date();	
+	
+$(document).ready(function(){
+  $("#burger").click(function(){
+    	var timeend = Date.now();
+	var timetaken = timeend - timestart;
+	var imagename = document.getElementById("burger").value; 
+	window.dataLayer.push({'time taken' : 'timetaken', 'image name' : "imagename"});  
+  });
+});
+</script>
+	
 </head>
 
 <body>

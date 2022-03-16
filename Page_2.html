@@ -56,7 +56,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 $(document).ready(function(){
 	var timestart = (Date.now()/1000);	
 	
-$(".food").on("submit", function() {
+$(".food").on("click", function() {
     	var timeend = (Date.now()/1000);
 	var timetaken = timeend - timestart;
 	var imagename = $('input[name=food]:checked').val();

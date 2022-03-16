@@ -34,19 +34,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2><b>Please select any one image</b></h2>
 
 <form method="get">
-	<input type="radio" name="food" id="burger" value="Burger.webp">	
+	<input type="radio" name="food" id="burger" class="food" value="Burger.webp">	
 	<label for="burger"><img src="Burger.webp" width="300" height="200"></label>
 
-	<input type="radio" name="food" id="dal makhani" value="Dal_Makhani.webp">
+	<input type="radio" name="food" id="dal makhani" class="food" value="Dal_Makhani.webp">
 	<label for="dal makhani"><img src="Dal_Makhani.webp" width="300" height="200"></label>
 
-	<input type="radio" name="food" id="pizza" value="Pizza.jpg">
+	<input type="radio" name="food" id="pizza" class="food" value="Pizza.jpg">
 	<label for="pizza"><img src="Pizza.jpg" width="300" height="200"></label><br>
 
-	<input type="radio" name="food" id="sandwich" value="Sandwich.webp">
+	<input type="radio" name="food" id="sandwich" class="food" value="Sandwich.webp">
 	<label for="sandwich"><img src="Sandwich.webp" width="300" height="200"></label>
 
-	<input type="radio" name="food" id="thali" value="Thali.jpg">
+	<input type="radio" name="food" id="thali" class="food" value="Thali.jpg">
 	<label for="thali"><img src="Thali.jpg" width="300" height="200"></label><br><br>
 
 <script>
@@ -54,11 +54,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 $(window).load(function(){
 	var timestart = Date.now();	
 	
-$("#burger").click(function(){
+$(".food").click(function(){
     	var timeend = Date.now();
 	var timetaken = timeend - timestart;
 	var imagename = document.getElementById("burger").value; 
-	window.dataLayer.push({'time taken' : 'timetaken', 'image name' : "imagename"});  
+	dataLayer.push({'time taken' : 'timetaken', 'image name' : "imagename"});  
   });
 });
 
